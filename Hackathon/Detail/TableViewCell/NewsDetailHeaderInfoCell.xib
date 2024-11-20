@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsDetailHeaderInfoCell" rowHeight="145" id="su3-rx-P2p" customClass="NewsDetailHeaderInfoCell" customModule="Hackathon_sample_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="su3-rx-P2p" id="cvY-f5-pvM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'No religion encourages activity that creates pollution': Supreme Court on cracker ban" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wn-Cz-FBu">
+                        <rect key="frame" x="40" y="12" width="313" height="77"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2 mins ago . 1 min read" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aps-ub-i1Y">
+                        <rect key="frame" x="16" y="97" width="361" height="36"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                        <color key="textColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.15686274509803921" alpha="0.88" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="aps-ub-i1Y" secondAttribute="trailing" constant="16" id="4mD-on-E7q"/>
+                    <constraint firstAttribute="bottom" secondItem="aps-ub-i1Y" secondAttribute="bottom" constant="12" id="8pI-zh-x8o"/>
+                    <constraint firstItem="1wn-Cz-FBu" firstAttribute="top" secondItem="cvY-f5-pvM" secondAttribute="top" constant="12" id="9p0-E2-Sug"/>
+                    <constraint firstItem="aps-ub-i1Y" firstAttribute="top" secondItem="1wn-Cz-FBu" secondAttribute="bottom" constant="8" symbolic="YES" id="GYE-j8-1mH"/>
+                    <constraint firstItem="aps-ub-i1Y" firstAttribute="leading" secondItem="cvY-f5-pvM" secondAttribute="leading" constant="16" id="NyM-7A-8Ie"/>
+                    <constraint firstAttribute="trailing" secondItem="1wn-Cz-FBu" secondAttribute="trailing" constant="40" id="drl-Ff-U5B"/>
+                    <constraint firstItem="1wn-Cz-FBu" firstAttribute="leading" secondItem="cvY-f5-pvM" secondAttribute="leading" constant="40" id="j1C-fq-6ro"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="headLineLabel" destination="1wn-Cz-FBu" id="suN-e9-ae0"/>
+                <outlet property="timeReadLabel" destination="aps-ub-i1Y" id="Vlf-UA-WzH"/>
+            </connections>
+            <point key="canvasLocation" x="87.786259541984734" y="55.281690140845072"/>
+        </tableViewCell>
+    </objects>
+</document>
