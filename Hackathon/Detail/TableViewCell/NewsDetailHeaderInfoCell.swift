@@ -18,6 +18,7 @@ class NewsDetailHeaderInfoCell: UITableViewCell {
     
     func configure(headLine: String?, postTime: String?) {
         self.headLineLabel.text = headLine
-        self.timeReadLabel.text = self.getHTDataPostTimeAndTimeToRead(postTime: postTime ?? "", timeToRead: "0")
+        let time = Date.timeFromDate(dateString: postTime ?? "")
+        self.timeReadLabel.text = self.getHTDataPostTimeAndTimeToRead(postTime: time, timeToRead: "0")
     }
 }

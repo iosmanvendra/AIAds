@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red,
                                   NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        let navLogoImageView = UIImageView()
+        navLogoImageView.frame = CGRect(x: 0, y: 0, width: 157, height: 30)
+        navLogoImageView.contentMode = .scaleAspectFit
+        navLogoImageView.image = UIImage(named: "ht_nav_logo")
+        let barButton = UIBarButtonItem.init(customView: navLogoImageView)
+        self.navigationItem.setLeftBarButtonItems([barButton], animated: true)
         self.title = "Hackathon"
         
         self.view.showActivityIndicator()

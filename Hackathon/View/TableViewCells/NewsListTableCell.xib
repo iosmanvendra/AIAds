@@ -2,25 +2,20 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Lato-Black.ttf">
-            <string>Lato-Black</string>
-        </array>
         <array key="Lato-Heavy.ttf">
             <string>Lato-Heavy</string>
-        </array>
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsListTableCell" rowHeight="115" id="D5Y-Qh-PfZ" customClass="NewsListTableCell" customModule="Hackathon_sample_app" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsListTableCell" rowHeight="115" id="D5Y-Qh-PfZ" customClass="NewsListTableCell" customModule="Hackathon" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D5Y-Qh-PfZ" id="0go-Zb-bPC">
@@ -38,8 +33,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pegasus: Woman who accused ex-CJI of harassment in surveillance list" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx6-0M-Rut">
-                                <rect key="frame" x="0.0" y="20.000000000000004" width="252.33333333333334" height="43.333333333333343"/>
-                                <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="16"/>
+                                <rect key="frame" x="0.0" y="20.000000000000004" width="242" height="43.333333333333343"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,17 +135,17 @@
                         </userDefinedRuntimeAttributes>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-zS-Ksp" userLabel="sectionDateView">
-                        <rect key="frame" x="12" y="90.333333333333329" width="170" height="11.666666666666671"/>
+                        <rect key="frame" x="12" y="90.333333333333329" width="168.33333333333334" height="11.666666666666671"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" text="INDIA NEWS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EG-RZ-KRU">
-                                <rect key="frame" x="0.0" y="0.0" width="58" height="11.666666666666666"/>
-                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="10"/>
+                                <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="11.666666666666666"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min ago . 4 min read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y1-rw-zTv">
-                                <rect key="frame" x="70" y="0.0" width="100" height="11.666666666666666"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
+                                <rect key="frame" x="68.333333333333329" y="0.0" width="99.999999999999986" height="11.666666666666666"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -162,11 +157,11 @@
                             <constraint firstItem="6EG-RZ-KRU" firstAttribute="top" secondItem="YBi-zS-Ksp" secondAttribute="top" id="WCQ-1P-DMO"/>
                             <constraint firstAttribute="trailing" secondItem="0y1-rw-zTv" secondAttribute="trailing" id="WJI-wc-D6E"/>
                             <constraint firstItem="0y1-rw-zTv" firstAttribute="top" secondItem="YBi-zS-Ksp" secondAttribute="top" id="kvZ-Zo-owL"/>
-                            <constraint firstItem="0y1-rw-zTv" firstAttribute="leading" secondItem="6EG-RZ-KRU" secondAttribute="trailing" constant="12" id="rOo-gg-wE6"/>
+                            <constraint firstItem="0y1-rw-zTv" firstAttribute="leading" secondItem="6EG-RZ-KRU" secondAttribute="trailing" constant="8" id="rOo-gg-wE6"/>
                             <constraint firstItem="6EG-RZ-KRU" firstAttribute="leading" secondItem="YBi-zS-Ksp" secondAttribute="leading" id="z8a-21-lvj"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-lT-RfJ">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-lT-RfJ">
                         <rect key="frame" x="244.33333333333334" y="86.333333333333329" width="20.000000000000028" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="07r-6B-wX8"/>

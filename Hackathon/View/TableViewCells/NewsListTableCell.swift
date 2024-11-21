@@ -60,7 +60,7 @@ class NewsListTableCell: UITableViewCell {
         let displayTime = Date.timeFromDate(dateString: item.publishedDate ?? "")
         self.timeLabel.text = self.getHTDataPostTimeAndTimeToRead(postTime: displayTime, timeToRead: String(item.timeToRead ?? 0)) //item.displayTime
         self.sponsoredLabel.isHidden = true
-        lblSectionName.text = item.section
+        lblSectionName.text = item.section?.uppercased()
 
         if lblSectionName.text?.isEmpty ?? true {
             timeToReadLeadingConstraint.constant = 0

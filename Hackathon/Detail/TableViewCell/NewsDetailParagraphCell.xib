@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-y9-hG8">
-                        <rect key="frame" x="12" y="12" width="369" height="121"/>
+                        <rect key="frame" x="16" y="8" width="361" height="129"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -26,10 +26,10 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Ko7-y9-hG8" firstAttribute="top" secondItem="aTI-w1-mp6" secondAttribute="top" constant="12" id="5e9-QR-ptP"/>
-                    <constraint firstAttribute="trailing" secondItem="Ko7-y9-hG8" secondAttribute="trailing" constant="12" id="6hc-4k-aBC"/>
-                    <constraint firstItem="Ko7-y9-hG8" firstAttribute="leading" secondItem="aTI-w1-mp6" secondAttribute="leading" constant="12" id="TrN-u3-QeB"/>
-                    <constraint firstAttribute="bottom" secondItem="Ko7-y9-hG8" secondAttribute="bottom" constant="12" id="Y72-v9-wTO"/>
+                    <constraint firstItem="Ko7-y9-hG8" firstAttribute="top" secondItem="aTI-w1-mp6" secondAttribute="top" constant="8" id="5e9-QR-ptP"/>
+                    <constraint firstAttribute="trailing" secondItem="Ko7-y9-hG8" secondAttribute="trailing" constant="16" id="6hc-4k-aBC"/>
+                    <constraint firstItem="Ko7-y9-hG8" firstAttribute="leading" secondItem="aTI-w1-mp6" secondAttribute="leading" constant="16" id="TrN-u3-QeB"/>
+                    <constraint firstAttribute="bottom" secondItem="Ko7-y9-hG8" secondAttribute="bottom" constant="8" id="Y72-v9-wTO"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

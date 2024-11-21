@@ -31,8 +31,8 @@ class NewsDetailParagraphCell: UITableViewCell {
                 options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
                 documentAttributes: nil)
             let mutableAttributedString = NSMutableAttributedString(attributedString: attributedString)
-//            mutableAttributedString.addAttribute(.font, value: font, range: NSRange(location: 0, length: mutableAttributedString.length))
-//                    mutableAttributedString.addAttribute(.foregroundColor, value: textColor, range: NSRange(location: 0, length: mutableAttributedString.length))
+            let font = UIFont(name: "Helvetica-Nueue", size: 16.0) ?? UIFont.systemFont(ofSize: 16.0)
+            mutableAttributedString.addAttribute(.font, value: font, range: NSRange(location: 0, length: mutableAttributedString.length))
                     
             // Set the attributed string to the UILabel's attributedText
             paragraphLabel.attributedText = mutableAttributedString

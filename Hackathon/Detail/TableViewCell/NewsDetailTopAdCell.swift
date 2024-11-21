@@ -15,7 +15,7 @@ class NewsDetailTopAdCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(ad: String?) {
-        
+    func configure(adUrl: String?) {
+        self.adImageView.sd_setImage(with: URL(string: adUrl ?? ""))
     }
 }

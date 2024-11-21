@@ -12,7 +12,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var tableVIew: UITableView!
     var viewModel: NewsViewModel?
     var feedUrl: String?
-    var detailItem: SectionItem?
+    var dataSource: [NewsDetailDataModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class NewsDetailViewController: UIViewController {
             }
             switch result {
             case .success(let data):
-                self?.detailItem = data.content.sectionItems
+                self?.dataSource = data
                 DispatchQueue.main.async {
                     self?.tableVIew.reloadData()
                 }
@@ -51,38 +51,35 @@ class NewsDetailViewController: UIViewController {
 extension NewsDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.detailItem == nil ? 0 : 5
+        return self.dataSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        
+        let item = dataSource?[indexPath.row]
+        switch item?.type {
+        case .topAd:
             let cell: NewsDetailTopAdCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-//            cell.configure(ad: <#T##String?#>) //need to pass adid here
+            cell.configure(adUrl: item?.data.0) //TODO: need to pass adid here
             return cell
-        case 1:
+        case .header:
             let cell: NewsDetailHeaderInfoCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.configure(headLine: self.detailItem?.headLine, postTime: self.detailItem?.publishedDate)
+            cell.configure(headLine: item?.data.0, postTime: item?.data.1)
             return cell
-        case 2:
+            
+        case .imageWithCaption:
             let cell: NewsDetailImageCaptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            var img = self.detailItem?.thumbImage ?? ""
-            if img.isEmpty {
-                img = self.detailItem?.mediumRes ?? ""
-            }
-            if img.isEmpty {
-                img = self.detailItem?.wallpaperLarge ?? ""
-            }
-
-            cell.configure(imgStr: img, caption: self.detailItem?.caption)
+            cell.configure(imgStr: item?.data.0 ?? "", caption: item?.data.1)
             return cell
-        case 3:
+            
+        case .paragraph:
             let cell: NewsDetailParagraphCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.configure(para: self.detailItem?.storyText)
-//            cell.configure(para: "The Supreme Court directed the Delhi police to create a special cell for enforcing the ban on crackers.")
+            cell.configure(para: item?.data.0)
             return cell
-        case 4:
+            
+        case .customAd:
             let cell: NewsDetailRelatedProductAdCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+            cell.delegate = self
             cell.configure()
             return cell
         default: break
@@ -98,5 +95,12 @@ extension NewsDetailViewController: UITableViewDataSource {
 extension NewsDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension NewsDetailViewController: NewsDetailProductAdCellDelegate {
+    
+    func didTapBuyButton() {
+        //TODO: action to be defined here:
     }
 }
