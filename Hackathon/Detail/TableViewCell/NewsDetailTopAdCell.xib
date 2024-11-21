@@ -9,33 +9,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsDetailTopAdCell" rowHeight="60" id="r4F-g9-aDF" customClass="NewsDetailTopAdCell" customModule="Hackathon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsDetailTopAdCell" rowHeight="74" id="r4F-g9-aDF" customClass="NewsDetailTopAdCell" customModule="Hackathon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="74"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r4F-g9-aDF" id="Z8t-Oe-6Y8">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r4F-g9-aDF" id="Z8t-Oe-6Y8">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3uH-Gb-WMy">
-                        <rect key="frame" x="36" y="0.0" width="321" height="60"/>
+                        <rect key="frame" x="36" y="8" width="321" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="QQS-Dv-XOU"/>
+                            <constraint firstAttribute="height" constant="50" id="QQS-Dv-XOU"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="3uH-Gb-WMy" secondAttribute="bottom" id="BJx-LJ-2Jo"/>
+                    <constraint firstAttribute="bottom" secondItem="3uH-Gb-WMy" secondAttribute="bottom" constant="8" id="BJx-LJ-2Jo"/>
                     <constraint firstItem="3uH-Gb-WMy" firstAttribute="leading" secondItem="Z8t-Oe-6Y8" secondAttribute="leading" constant="36" id="EKL-Vs-16f"/>
                     <constraint firstAttribute="trailing" secondItem="3uH-Gb-WMy" secondAttribute="trailing" constant="36" id="aEo-Vx-OXq"/>
-                    <constraint firstItem="3uH-Gb-WMy" firstAttribute="top" secondItem="Z8t-Oe-6Y8" secondAttribute="top" id="hIG-5d-BIL"/>
+                    <constraint firstItem="3uH-Gb-WMy" firstAttribute="top" secondItem="Z8t-Oe-6Y8" secondAttribute="top" constant="8" id="hIG-5d-BIL"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="adImageView" destination="3uH-Gb-WMy" id="t1y-CM-bE0"/>
             </connections>
-            <point key="canvasLocation" x="136.64122137404578" y="25.35211267605634"/>
+            <point key="canvasLocation" x="136.64122137404578" y="30.281690140845072"/>
         </tableViewCell>
     </objects>
 </document>

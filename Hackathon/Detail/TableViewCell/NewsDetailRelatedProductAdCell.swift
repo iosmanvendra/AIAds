@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NewsDetailProductAdCellDelegate: AnyObject {
-    func didTapBuyButton()
+    func adTapped(ad: CustomAdModel?)
 }
 
 class NewsDetailRelatedProductAdCell: UITableViewCell {
@@ -18,17 +18,20 @@ class NewsDetailRelatedProductAdCell: UITableViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var buyButton: UIButton!
     
+    var ad: CustomAdModel?
     weak var delegate: NewsDetailProductAdCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure() {
-        self.productImageView.sd_setImage(with: nil, placeholderImage: UIImage(named: "placeholder"))
+    func configure(ad: CustomAdModel?) {
+        self.titleLabel.text = ad?.title
+        self.descriptionLabel.text = ad?.subTitle
+        self.productImageView.sd_setImage(with: URL(string: ad?.bannerUrl ?? ""), placeholderImage: UIImage(named: "placeholder"))
     }
     
     @IBAction func buyButtonTapped(_ sender: Any) {
-        self.delegate?.didTapBuyButton()
+        self.delegate?.adTapped(ad: ad)
     }
 }

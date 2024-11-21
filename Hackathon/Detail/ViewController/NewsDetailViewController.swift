@@ -17,12 +17,8 @@ class NewsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NewsDetailTopAdCell.registerNib(tableVIew)
-        NewsDetailHeaderInfoCell.registerNib(tableVIew)
-        NewsDetailImageCaptionCell.registerNib(tableVIew)
-        NewsDetailParagraphCell.registerNib(tableVIew)
-        NewsDetailRelatedProductAdCell.registerNib(tableVIew)
         self.view.showActivityIndicator()
+        self.registerTableViewCells()
         
         viewModel?.fetchDetailNewsItem(urlString: feedUrl, completion: { [weak self] result in
             
@@ -45,6 +41,15 @@ class NewsDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setNavBarAppearance()
+    }
+    
+    func registerTableViewCells() {
+        NewsDetailTopAdCell.registerNib(tableVIew)
+        NewsDetailHeaderInfoCell.registerNib(tableVIew)
+        NewsDetailImageCaptionCell.registerNib(tableVIew)
+        NewsDetailParagraphCell.registerNib(tableVIew)
+        NewsDetailRelatedProductAdCell.registerNib(tableVIew)
+        NewsDetailCarouselTableCell.registerNib(tableVIew)
     }
 }
 
@@ -80,8 +85,15 @@ extension NewsDetailViewController: UITableViewDataSource {
         case .customAd:
             let cell: NewsDetailRelatedProductAdCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
             cell.delegate = self
-            cell.configure()
+            cell.configure(ad: item?.ads?.first)
             return cell
+            
+        case .adCarousel:
+            let cell: NewsDetailCarouselTableCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+            cell.delegate = self
+            cell.configure(ads: item?.ads ?? [])
+            return cell
+            
         default: break
         }
         return UITableViewCell()
@@ -99,8 +111,7 @@ extension NewsDetailViewController: UITableViewDelegate {
 }
 
 extension NewsDetailViewController: NewsDetailProductAdCellDelegate {
-    
-    func didTapBuyButton() {
+    func adTapped(ad: CustomAdModel?) {
         //TODO: action to be defined here:
     }
 }
