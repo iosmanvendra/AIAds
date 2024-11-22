@@ -117,6 +117,7 @@ class NewsDetailViewController: UIViewController, ReadAloudDelegate {
         setNavBarAppearance()
     }
     
+<<<<<<< HEAD
     private func getAudioData(withData data: String?) {
         viewModel?.fetchTTS(withStoryText: data, withAudioLanguageCode: selectedLanguage.rawValue, withMaleVoice: isMaleVoice, completion: { [weak self] result in
             switch result {
@@ -168,8 +169,7 @@ class NewsDetailViewController: UIViewController, ReadAloudDelegate {
         } catch {
             print("Error handling audio file: \(error.localizedDescription)")
         }
-    }
-    
+=======
     func registerTableViewCells() {
         NewsDetailTopAdCell.registerNib(tableVIew)
         NewsDetailHeaderInfoCell.registerNib(tableVIew)
@@ -177,6 +177,7 @@ class NewsDetailViewController: UIViewController, ReadAloudDelegate {
         NewsDetailParagraphCell.registerNib(tableVIew)
         NewsDetailRelatedProductAdCell.registerNib(tableVIew)
         NewsDetailCarouselTableCell.registerNib(tableVIew)
+>>>>>>> origin/main
     }
 }
 
@@ -239,7 +240,11 @@ extension NewsDetailViewController: UITableViewDelegate {
 }
 
 extension NewsDetailViewController: NewsDetailProductAdCellDelegate {
+<<<<<<< HEAD
+    func didTapBuyButton() {
+=======
     func adTapped(ad: CustomAdModel?) {
         //TODO: action to be defined here:
+>>>>>>> origin/main
     }
 }
